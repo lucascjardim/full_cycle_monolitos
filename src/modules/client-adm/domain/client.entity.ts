@@ -1,4 +1,3 @@
-import { create } from "domain";
 import AggregateRoot from "../../@shared/domain/entity/aggregate-root.interface";
 import BaseEntity from "../../@shared/domain/entity/base.entity";
 import Id from "../../@shared/domain/value-object/id.value-object";
@@ -8,8 +7,8 @@ type ClientProps = {
   name:string;
   email:string;
   address:string;
-  createdAt?:Date,
-  updatedAt?:Date,
+  createdAt?:Date;
+  updatedAt?:Date;
 }
 
 export default class Client extends BaseEntity implements AggregateRoot{
