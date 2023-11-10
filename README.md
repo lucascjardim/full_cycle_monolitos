@@ -1,6 +1,8 @@
 # fullcycle-repositories
 
-Cap DDD
+Cap DDD e Sistemas Monolíticos
+
+npm install
 
 Favor rodar os testes com:
 npm test -- --runInBand

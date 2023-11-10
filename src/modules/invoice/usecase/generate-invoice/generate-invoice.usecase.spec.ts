@@ -1,7 +1,4 @@
 import Id from "../../../@shared/domain/value-object/id.value-object";
-import InvoiceItem from "../../domain/invoice-item.entity";
-import Invoice from "../../domain/invoice.entity";
-import Address from "../../domain/value-object/address";
 import GenerateInvoiceUseCase from "./generate-invoice.usecase";
 
 describe("generate invoice usecase unit test", () => {
@@ -39,7 +36,6 @@ describe("generate invoice usecase unit test", () => {
     const repository = MockRepository();
     const generateInvoiceUseCase = new GenerateInvoiceUseCase(repository);
     const result = await generateInvoiceUseCase.execute(input);
-    console.log(result.items)
     expect(repository.generate).toHaveBeenCalled;
     expect(result.id).toBeDefined;
     expect(result.name).toBe(input.name);

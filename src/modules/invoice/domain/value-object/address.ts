@@ -23,7 +23,7 @@ export default class Address {
     this._zip = props.zipCode;
     this._city = props.city;
     this._state = props.state;
-    this.validate();
+    //this.validate();
   }
 
   get street(): string {
