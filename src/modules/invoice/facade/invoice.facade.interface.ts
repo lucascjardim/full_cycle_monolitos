@@ -1,7 +1,8 @@
 import Id from "../../@shared/domain/value-object/id.value-object";
+import { GenerateInvoiceUseCaseOutputDto } from "../usecase/generate-invoice/generate-invoice.usecase.dto";
 
 export interface GenerateInvoiceFacadeInputDto {
-  id: Id;
+  id?: Id;
   name: string;
   document: string;
   street: string;
@@ -48,6 +49,6 @@ export interface FindInvoiceFacadeOutputDto{
 }
 
 export default interface InvoiceFacadeInterface{
-  generate(input:GenerateInvoiceFacadeInputDto):Promise<void>;
+  generate(input:GenerateInvoiceFacadeInputDto):Promise<GenerateInvoiceUseCaseOutputDto>;
   find(input:FindInvoiceFacadeInputDto):Promise<FindInvoiceFacadeOutputDto>;
 }

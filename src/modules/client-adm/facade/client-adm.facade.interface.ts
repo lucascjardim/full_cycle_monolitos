@@ -2,7 +2,13 @@ export interface AddClientFacadeInputDto {
   id?:string;
   name:string;
   email:string;
-  address:string;
+  street:string;
+  number:string;
+  city:string;
+  state:string;
+  zipCode:string;
+  document:string;
+  complement:string,
 }
 
 export interface FindClientFacadeInputDto {
@@ -13,7 +19,13 @@ export interface FindClientFacadeOutputDto{
   id:string;
   name:string;
   email:string;
-  address:string;
+  street:string;
+  state:string;
+  city:string;
+  zipCode:string;
+  document:string,
+  complement:string,
+  number:number,
   createdAt:Date;
   updatedAt:Date;
 }

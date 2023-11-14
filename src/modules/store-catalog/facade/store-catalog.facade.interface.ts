@@ -7,6 +7,8 @@ export interface FindStoreCatalogFacadeOutputDto {
   name:string;
   description:string;
   salesPrice:number;
+  // quantity:number;
+  // subtotal:number;
 }
 
 export interface FindAllStoreCatalogFacadeOutputDto{

@@ -6,7 +6,13 @@ const client = new Client({
   id:new Id("1"),
   name:"Client 1",
   email: "client@x.com",
-  address: "Address 1"
+  street:"street",
+  city:"City",
+  state:"ES",
+  number:"10A",
+  document:"102020",
+  complement:"Address 1",
+  zipCode:"29890-000",
 })
 
 const MockRepository = () => {
@@ -30,7 +36,7 @@ describe("Find client usecase unit test", () => {
     expect(result.id).toEqual(input.id);
     expect(result.name).toBe(client.name);
     expect(result.email).toBe(client.email);
-    expect(result.address).toBe(client.address);
+    expect(result.street).toBe(client.street);
     expect(result.createdAt).toBe(client.createdAt);
     expect(result.updatedAt).toBe(client.updatedAt);
   });
